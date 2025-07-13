@@ -120,7 +120,7 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
@@ -260,8 +260,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((trial_type !== &quot;stop&quot;)) {&amp;#10;    SSD = 0;&amp;#10;    volume = 0;&amp;#10;} else {&amp;#10;    SSD = SSD_dynamic;&amp;#10;    volume = 1;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if trial_type != 'stop':&amp;#10;    SSD = 0&amp;#10;    volume = 0&amp;#10;else:&amp;#10;     SSD = SSD_dynamic&amp;#10;     volume = 1" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((trial_type !== &quot;stop&quot;)) {&amp;#10;    SSD = 0;&amp;#10;    volume = 0;&amp;#10;} else {&amp;#10;    SSD = SSD_dynamic;&amp;#10;    volume = 1;&amp;#10;    stop_signal.setVolume(1);&amp;#10;    stop_signal.status = NOT_STARTED;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if trial_type != 'stop':&amp;#10;    SSD = 0&amp;#10;    volume = 0&amp;#10;else:&amp;#10;     SSD = SSD_dynamic&amp;#10;     volume = 1&amp;#10;     stop_signal.setVolume(1)&amp;#10;     stop_signal.status = NOT_STARTED  # reactiva el sonido" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -313,7 +313,7 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
@@ -362,15 +362,15 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="trial_type_actual = trial_type;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="&amp;#10;trial_type_actual = trial_type&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="ensayoClock = new util.Clock();&amp;#10;trial_type_actual = trial_type;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="ensayoClock = core.Clock()&amp;#10;trial_type_actual = trial_type&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="&amp;#10;if trial_type == 'go' and respuesta_A.keys:&amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="if (((trial_type === &quot;go&quot;) &amp;&amp; respuesta_A.keys)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="# Obtenemos tiempo actual del ensayo&amp;#10;t = ensayoClock.getTime()&amp;#10;&amp;#10;# --- GO ---&amp;#10;if trial_type == 'go':&amp;#10;    if respuesta_A.keys and len(respuesta_A.keys) &gt; 0:&amp;#10;        continueRoutine = False&amp;#10;    elif t &gt;= 1.5:&amp;#10;        continueRoutine = False  # omisión&amp;#10;&amp;#10;# --- STOP ---&amp;#10;elif trial_type == 'stop':&amp;#10;    if respuesta_A.keys and len(respuesta_A.keys) &gt; 0:&amp;#10;        flecha_A.setAutoDraw(False)  # desaparece la flecha&amp;#10;    if t &gt;= 1.5:&amp;#10;        continueRoutine = False  # se termine sí o sí a los 1.5 s&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="t = ensayoClock.getTime();&amp;#10;if ((trial_type === &quot;go&quot;)) {&amp;#10;    if ((respuesta_A.keys &amp;&amp; (respuesta_A.keys.length &gt; 0))) {&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        if ((t &gt;= 1.5)) {&amp;#10;            continueRoutine = false;&amp;#10;        }&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((trial_type === &quot;stop&quot;)) {&amp;#10;        if ((respuesta_A.keys &amp;&amp; (respuesta_A.keys.length &gt; 0))) {&amp;#10;            flecha_A.setAutoDraw(false);&amp;#10;        }&amp;#10;        if ((t &gt;= 1.5)) {&amp;#10;            continueRoutine = false;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="if ((trial_type_actual === &quot;stop&quot;)) {&amp;#10;    if (respuesta_A.keys) {&amp;#10;        SSD_dynamic = Math.max(50, (SSD_dynamic - 0.05));&amp;#10;    } else {&amp;#10;        SSD_dynamic = Math.min(900, (SSD_dynamic + 0.05));&amp;#10;    }&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;SSD&quot;, SSD);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if trial_type_actual == 'stop':&amp;#10;    if respuesta_A.keys:&amp;#10;        SSD_dynamic = max(50, SSD_dynamic - 0.05)&amp;#10;    else:&amp;#10;        SSD_dynamic = min(900, SSD_dynamic + 0.05)&amp;#10;&amp;#10;thisExp.addData('SSD', SSD)&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if ((trial_type_actual === &quot;stop&quot;)) {&amp;#10;    if (respuesta_A.keys) {&amp;#10;        SSD_dynamic = Math.max(0.05, (SSD_dynamic - 0.05));&amp;#10;    } else {&amp;#10;        SSD_dynamic = Math.min(0.9, (SSD_dynamic + 0.05));&amp;#10;    }&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;SSD&quot;, SSD);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trial_type_actual == 'stop':&amp;#10;    if respuesta_A.keys:&amp;#10;        SSD_dynamic = max(0.05, SSD_dynamic - 0.05)&amp;#10;    else:&amp;#10;        SSD_dynamic = min(0.9, SSD_dynamic + 0.05)&amp;#10;&amp;#10;thisExp.addData('SSD', SSD)&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code" valType="code" updates="None" name="name"/>
       </CodeComponent>
