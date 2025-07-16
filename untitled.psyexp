@@ -369,10 +369,27 @@
         <Param val="t = ensayoClock.getTime();&amp;#10;if ((trial_type === &quot;go&quot;)) {&amp;#10;    if ((respuesta_A.keys &amp;&amp; (respuesta_A.keys.length &gt; 0))) {&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        if ((t &gt;= 1.5)) {&amp;#10;            continueRoutine = false;&amp;#10;        }&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((trial_type === &quot;stop&quot;)) {&amp;#10;        if ((respuesta_A.keys &amp;&amp; (respuesta_A.keys.length &gt; 0))) {&amp;#10;            flecha_A.setAutoDraw(false);&amp;#10;        }&amp;#10;        if ((t &gt;= 1.5)) {&amp;#10;            continueRoutine = false;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="if ((trial_type_actual === &quot;stop&quot;)) {&amp;#10;    if (respuesta_A.keys) {&amp;#10;        SSD_dynamic = Math.max(0.05, (SSD_dynamic - 0.05));&amp;#10;    } else {&amp;#10;        SSD_dynamic = Math.min(0.9, (SSD_dynamic + 0.05));&amp;#10;    }&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;SSD&quot;, SSD);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if trial_type_actual == 'stop':&amp;#10;    if respuesta_A.keys:&amp;#10;        SSD_dynamic = max(0.05, SSD_dynamic - 0.05)&amp;#10;    else:&amp;#10;        SSD_dynamic = min(0.9, SSD_dynamic + 0.05)&amp;#10;&amp;#10;thisExp.addData('SSD', SSD)&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if ((trial_type_actual === &quot;stop&quot;)) {&amp;#10;    if (respuesta_A.keys) {&amp;#10;        SSD_dynamic = Math.max(0.05, (SSD_dynamic - 0.05));&amp;#10;    } else {&amp;#10;        SSD_dynamic = Math.min(0.9, (SSD_dynamic + 0.05));&amp;#10;    }&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;SSD&quot;, SSD);&amp;#10;validez = &quot;sin clasificar&quot;;&amp;#10;validez_binaria = 0;&amp;#10;if ((trial_type === &quot;go&quot;)) {&amp;#10;    if (respuesta_A.keys) {&amp;#10;        if ((respuesta_A.rt &lt; 0.1)) {&amp;#10;            validez = &quot;anticipada&quot;;&amp;#10;            validez_binaria = 0;&amp;#10;        } else {&amp;#10;            if (respuesta_A.corr) {&amp;#10;                validez = &quot;correcta&quot;;&amp;#10;                validez_binaria = 1;&amp;#10;            } else {&amp;#10;                validez = &quot;incorrecta&quot;;&amp;#10;                validez_binaria = 0;&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        validez = &quot;omitida&quot;;&amp;#10;        validez_binaria = 0;&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((trial_type === &quot;stop&quot;)) {&amp;#10;        if (respuesta_A.keys) {&amp;#10;            validez = &quot;incorrecta&quot;;&amp;#10;            validez_binaria = 0;&amp;#10;        } else {&amp;#10;            validez = &quot;correcta&quot;;&amp;#10;            validez_binaria = 1;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;A.addData(&quot;validez&quot;, validez);&amp;#10;A.addData(&quot;validez_binaria&quot;, validez_binaria);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if trial_type_actual == 'stop':&amp;#10;    if respuesta_A.keys:&amp;#10;        SSD_dynamic = max(0.05, SSD_dynamic - 0.05)&amp;#10;    else:&amp;#10;        SSD_dynamic = min(0.9, SSD_dynamic + 0.05)&amp;#10;&amp;#10;thisExp.addData('SSD', SSD)&amp;#10;# Default&amp;#10;validez = 'sin clasificar'&amp;#10;validez_binaria = 0&amp;#10;&amp;#10;if trial_type == 'go':&amp;#10;    if respuesta_A.keys:&amp;#10;        if respuesta_A.rt &lt; 0.1:&amp;#10;            validez = 'anticipada'&amp;#10;            validez_binaria = 0&amp;#10;        elif respuesta_A.corr:&amp;#10;            validez = 'correcta'&amp;#10;            validez_binaria = 1&amp;#10;        else:&amp;#10;            validez = 'incorrecta'&amp;#10;            validez_binaria = 0&amp;#10;    else:&amp;#10;        validez = 'omitida'&amp;#10;        validez_binaria = 0&amp;#10;&amp;#10;elif trial_type == 'stop':&amp;#10;    if respuesta_A.keys:&amp;#10;        validez = 'incorrecta'&amp;#10;        validez_binaria = 0&amp;#10;    else:&amp;#10;        validez = 'correcta'&amp;#10;        validez_binaria = 1&amp;#10;A.addData('validez', validez)&amp;#10;A.addData('validez_binaria', validez_binaria)&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="contado_fb" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if ((! _pj.in_es6(&quot;n_trials_A&quot;, vars()))) {&amp;#10;    n_trials_A = 0;&amp;#10;    n_omisiones_A = 0;&amp;#10;    n_errores_A = 0;&amp;#10;    rt_list_A = [];&amp;#10;}&amp;#10;n_trials_A += 1;&amp;#10;if ((trial_type === &quot;go&quot;)) {&amp;#10;    if ((! respuesta_A.keys)) {&amp;#10;        n_omisiones_A += 1;&amp;#10;    } else {&amp;#10;        if ((! respuesta_A.corr)) {&amp;#10;            n_errores_A += 1;&amp;#10;        } else {&amp;#10;            if (((respuesta_A.rt !== null) &amp;&amp; (respuesta_A.rt &gt;= 0.1))) {&amp;#10;                rt_list_A.push(respuesta_A.rt);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# -----------------------------------------------&amp;#10;# Acumuladores para feedback entre bloques&amp;#10;# Inicialización previa en &quot;Begin Experiment&quot;&amp;#10;if 'n_trials_A' not in vars():&amp;#10;    n_trials_A = 0&amp;#10;    n_omisiones_A = 0&amp;#10;    n_errores_A = 0&amp;#10;    rt_list_A = []&amp;#10;&amp;#10;n_trials_A += 1&amp;#10;&amp;#10;if trial_type == 'go':&amp;#10;    if not respuesta_A.keys:&amp;#10;        n_omisiones_A += 1&amp;#10;    elif not respuesta_A.corr:&amp;#10;        n_errores_A += 1&amp;#10;    elif respuesta_A.rt is not None and respuesta_A.rt &gt;= 0.1:&amp;#10;        rt_list_A.append(respuesta_A.rt)&amp;#10;# -----------------------------------------------&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="contado_fb" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
     <Routine name="instrucciones">
@@ -457,9 +474,350 @@
         <Param val="definicion_ssd" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
+    <Routine name="stats">
+      <RoutineSettingsComponent name="stats" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="stats" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="feedback_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="feedback_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="10" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="&amp;#10;" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="feedback_code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="// ⚠️ CAMBIÁ 'A' por el nombre real de tu loop&amp;#10;var valideces = A.data['validez'];&amp;#10;&amp;#10;var total = valideces.length;&amp;#10;var omitidas = 0;&amp;#10;var errores = 0;&amp;#10;&amp;#10;for (var i = 0; i &lt; total; i++) {&amp;#10;    if (valideces[i] === 'omitida') {&amp;#10;        omitidas += 1;&amp;#10;    } else if (valideces[i] === 'error') {&amp;#10;        errores += 1;&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;var mensaje = &quot;Resumen del bloque anterior:\n\n&quot;;&amp;#10;&amp;#10;if (omitidas / total &gt; 0.10) {&amp;#10;    mensaje += &quot;⚠️ Muchas omisiones. Respondé sin esperar.\n&quot;;&amp;#10;}&amp;#10;if (errores / total &gt; 0.25) {&amp;#10;    mensaje += &quot;⚠️ Muchos errores. Prestá atención.\n&quot;;&amp;#10;}&amp;#10;if (mensaje === &quot;Resumen del bloque anterior:\n\n&quot;) {&amp;#10;    mensaje += &quot;✅ Todo bien. Buen trabajo.\n&quot;;&amp;#10;}&amp;#10;&amp;#10;mensaje += &quot;\nPresiona espacio para continuar.&quot;;&amp;#10;&amp;#10;// ⚠️ CAMBIÁ 'feedback_text' si tu componente de texto tiene otro nombre&amp;#10;feedback_text.text = mensaje;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# ⚠️ CAMBIÁ el nombre 'A' por el nombre real de tu loop (por ejemplo: 'bloqueA', 'trials', etc.)&amp;#10;valideces = A.data['validez']&amp;#10;&amp;#10;total = len(valideces)&amp;#10;omitidas = sum(1 for v in valideces if v == 'omitida')&amp;#10;errores = sum(1 for v in valideces if v == 'error')&amp;#10;&amp;#10;mensaje = &quot;Resumen del bloque anterior:\n\n&quot;&amp;#10;&amp;#10;if omitidas / total &gt; 0.10:&amp;#10;    mensaje += &quot;⚠️ Muchas omisiones. Respondé sin esperar.\n&quot;&amp;#10;if errores / total &gt; 0.25:&amp;#10;    mensaje += &quot;⚠️ Muchos errores. Prestá atención.\n&quot;&amp;#10;if mensaje.strip() == &quot;Resumen del bloque anterior:&quot;:&amp;#10;    mensaje += &quot;✅ Todo bien. Buen trabajo.\n&quot;&amp;#10;&amp;#10;mensaje += &quot;\nPresiona espacio para continuar.&quot;&amp;#10;&amp;#10;# ⚠️ CAMBIÁ 'feedback_text' si tu componente de texto se llama distinto&amp;#10;feedback_text.text = mensaje&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Both" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="feedback_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="practica_go">
+      <RoutineSettingsComponent name="practica_go" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="practica_go" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <PolygonComponent name="flecha_go" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="white" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="white" valType="color" updates="constant" name="lineColor"/>
+        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="flecha_go" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="angle" valType="num" updates="set every repeat" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="arrow" valType="str" updates="None" name="shape"/>
+        <Param val="(0.25, 0.25)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <KeyboardComponent name="respuesta_go" plugin="None">
+        <Param val="'left','right'" valType="list" updates="set every repeat" name="allowedKeys"/>
+        <Param val="$correct_key" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="respuesta_go" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="first key" valType="str" updates="constant" name="store"/>
+        <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="feedback_go">
+      <RoutineSettingsComponent name="feedback_go" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="feedback_go" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="feedack_solo_go" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="feedack_solo_go" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$feedback_go_text" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="fin_go" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="fin_go" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="cargar_datos">
+      <RoutineSettingsComponent name="cargar_datos" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="cargar_datos" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="texto_feedback_go" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="intro_text = (&quot;Ahora pasaremos a una pr\u00e1ctica con ensayos 'go' y algunos con se\u00f1ales 'stop'. &quot; + &quot;Cuando escuches el tono, intent\u00e1 no responder. Pero no esperes: respond\u00e9 lo m\u00e1s r\u00e1pido y preciso posible.\n\n&quot;);&amp;#10;if ((rt_go_list.length &gt; 0)) {&amp;#10;    rt_suma = 0;&amp;#10;    n_validos = 0;&amp;#10;    for (var rt, _pj_c = 0, _pj_a = rt_go_list, _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        rt = _pj_a[_pj_c];&amp;#10;        if ((((rt !== null) &amp;&amp; (rt &gt;= 100)) &amp;&amp; (rt &lt;= 1500))) {&amp;#10;            rt_suma += rt;&amp;#10;            n_validos += 1;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((n_validos &gt; 0)) {&amp;#10;        rt_medio = (rt_suma / n_validos);&amp;#10;    } else {&amp;#10;        rt_medio = 0;&amp;#10;    }&amp;#10;} else {&amp;#10;    rt_medio = 0;&amp;#10;}&amp;#10;if ((total_trials_go_only &gt; 0)) {&amp;#10;    omisiones_prop = (omisiones_go / total_trials_go_only);&amp;#10;    errores_prop = (errores_go / total_trials_go_only);&amp;#10;} else {&amp;#10;    omisiones_prop = 0;&amp;#10;    errores_prop = 0;&amp;#10;}&amp;#10;mensajes = [];&amp;#10;if ((rt_medio &gt; 600)) {&amp;#10;    mensajes.push(((&quot;Tu tiempo medio de respuesta fue de &quot; + Number.parseInt(rt_medio).toString()) + &quot; ms. Intent\u00e1 responder un poco m\u00e1s r\u00e1pido.&quot;));&amp;#10;} else {&amp;#10;    mensajes.push(((&quot;Buen ritmo de respuesta: &quot; + Number.parseInt(rt_medio).toString()) + &quot; ms.&quot;));&amp;#10;}&amp;#10;if ((omisiones_prop &gt; 0.1)) {&amp;#10;    mensajes.push(((&quot;Omitiste &quot; + util.round((omisiones_prop * 100)).toString()) + &quot;% de las respuestas. Intent\u00e1 no dejar pasar flechas sin contestar.&quot;));&amp;#10;}&amp;#10;if ((errores_prop &gt; 0.1)) {&amp;#10;    mensajes.push(((&quot;Cometiste &quot; + util.round((errores_prop * 100)).toString()) + &quot;% de errores. Prest\u00e1 atenci\u00f3n a la direcci\u00f3n de las flechas.&quot;));&amp;#10;}&amp;#10;if ((mensajes.length === 0)) {&amp;#10;    mensajes.push(&quot;\u00a1Muy bien! Est\u00e1s listo para continuar.&quot;);&amp;#10;}&amp;#10;feedback_go_text = (intro_text + mensajes.join(&quot;\n&quot;));&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Mensaje introductorio fijo&amp;#10;intro_text = &quot;Ahora pasaremos a una práctica con ensayos 'go' y algunos con señales 'stop'. &quot; + \&amp;#10;             &quot;Cuando escuches el tono, intentá no responder. Pero no esperes: respondé lo más rápido y preciso posible.\n\n&quot;&amp;#10;&amp;#10;# Seguridad: evitar errores si listas están vacías&amp;#10;if len(rt_go_list) &gt; 0:&amp;#10;    rt_suma = 0&amp;#10;    n_validos = 0&amp;#10;    for rt in rt_go_list:&amp;#10;        if rt is not None and rt &gt;= 100 and rt &lt;= 1500:&amp;#10;            rt_suma += rt&amp;#10;            n_validos += 1&amp;#10;    if n_validos &gt; 0:&amp;#10;        rt_medio = rt_suma / n_validos&amp;#10;    else:&amp;#10;        rt_medio = 0&amp;#10;else:&amp;#10;    rt_medio = 0&amp;#10;&amp;#10;# Calculamos proporciones&amp;#10;if total_trials_go_only &gt; 0:&amp;#10;    omisiones_prop = omisiones_go / total_trials_go_only&amp;#10;    errores_prop = errores_go / total_trials_go_only&amp;#10;else:&amp;#10;    omisiones_prop = 0&amp;#10;    errores_prop = 0&amp;#10;&amp;#10;# Construcción del mensaje&amp;#10;mensajes = []&amp;#10;&amp;#10;if rt_medio &gt; 600:&amp;#10;    mensajes.append(&quot;Tu tiempo medio de respuesta fue de &quot; + str(int(rt_medio)) + &quot; ms. Intentá responder un poco más rápido.&quot;)&amp;#10;else:&amp;#10;    mensajes.append(&quot;Buen ritmo de respuesta: &quot; + str(int(rt_medio)) + &quot; ms.&quot;)&amp;#10;&amp;#10;if omisiones_prop &gt; 0.1:&amp;#10;    mensajes.append(&quot;Omitiste &quot; + str(round(omisiones_prop * 100)) + &quot;% de las respuestas. Intentá no dejar pasar flechas sin contestar.&quot;)&amp;#10;&amp;#10;if errores_prop &gt; 0.1:&amp;#10;    mensajes.append(&quot;Cometiste &quot; + str(round(errores_prop * 100)) + &quot;% de errores. Prestá atención a la dirección de las flechas.&quot;)&amp;#10;&amp;#10;if len(mensajes) == 0:&amp;#10;    mensajes.append(&quot;¡Muy bien! Estás listo para continuar.&quot;)&amp;#10;&amp;#10;# Texto final que se mostrará&amp;#10;feedback_go_text = intro_text + &quot;\n&quot;.join(mensajes)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="texto_feedback_go" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="datos_stats">
+      <RoutineSettingsComponent name="datos_stats" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="datos_stats" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="feedback_code_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;datos = A.data;&amp;#10;tipos = datos[&quot;trial_type&quot;];&amp;#10;rts = datos[&quot;respuesta_A.rt&quot;];&amp;#10;corrs = datos[&quot;respuesta_A.corr&quot;];&amp;#10;keys = datos[&quot;respuesta_A.keys&quot;];&amp;#10;go_trials = 0;&amp;#10;go_omitidas = 0;&amp;#10;go_errores = 0;&amp;#10;go_rts = [];&amp;#10;for (var i, _pj_c = 0, _pj_a = util.range(tipos.length), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;    i = _pj_a[_pj_c];&amp;#10;    if ((tipos[i] === &quot;go&quot;)) {&amp;#10;        go_trials += 1;&amp;#10;        rt = rts[i];&amp;#10;        corr = corrs[i];&amp;#10;        key = keys[i];&amp;#10;        if (_pj.in_es6(key, [null, &quot;&quot;, &quot;None&quot;, &quot;none&quot;])) {&amp;#10;            go_omitidas += 1;&amp;#10;        } else {&amp;#10;            try {&amp;#10;                rt = Number.parseFloat(rt);&amp;#10;                if ((rt &gt;= 0.1)) {&amp;#10;                    go_rts.push(rt);&amp;#10;                    if (_pj.in_es6(corr, [0, &quot;0&quot;])) {&amp;#10;                        go_errores += 1;&amp;#10;                    }&amp;#10;                }&amp;#10;            } catch(e) {&amp;#10;                continue;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;omitidas_pct = ((go_trials &gt; 0) ? (go_omitidas / go_trials) : 0);&amp;#10;errores_pct = ((go_trials &gt; 0) ? (go_errores / go_trials) : 0);&amp;#10;rt_prom = ((go_rts.length &gt; 0) ? (util.sum(go_rts) / go_rts.length) : 0);&amp;#10;mensaje = &quot;Resumen del bloque anterior:\n\n&quot;;&amp;#10;problemas = 0;&amp;#10;if ((rt_prom &gt; 0.6)) {&amp;#10;    mensaje += &quot;\u26a0\ufe0f Respondiste muy lento. Intenta responder m\u00e1s r\u00e1pido.\n&quot;;&amp;#10;    problemas += 1;&amp;#10;}&amp;#10;if ((omitidas_pct &gt; 0.1)) {&amp;#10;    mensaje += &quot;\u26a0\ufe0f Omitiste muchas respuestas. \u00a1No esperes, responde a todas las flechas!\n&quot;;&amp;#10;    problemas += 1;&amp;#10;}&amp;#10;if ((errores_pct &gt; 0.25)) {&amp;#10;    mensaje += &quot;\u26a0\ufe0f Cometiste varios errores. Presta m\u00e1s atenci\u00f3n.\n&quot;;&amp;#10;    problemas += 1;&amp;#10;}&amp;#10;if ((problemas === 0)) {&amp;#10;    mensaje += &quot;\u2705 Buen trabajo. Contin\u00faa as\u00ed.\n&quot;;&amp;#10;}&amp;#10;mensaje += &quot;\nPresiona una tecla para continuar.&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Obtener datos del bloque anterior&amp;#10;datos = A.data  # Asegurate que sea el nombre exacto del loop&amp;#10;&amp;#10;tipos = datos['trial_type']&amp;#10;rts = datos['respuesta_A.rt']&amp;#10;corrs = datos['respuesta_A.corr']&amp;#10;keys = datos['respuesta_A.keys']&amp;#10;&amp;#10;# Inicializar contadores&amp;#10;go_trials = 0&amp;#10;go_omitidas = 0&amp;#10;go_errores = 0&amp;#10;go_rts = []&amp;#10;&amp;#10;for i in range(len(tipos)):&amp;#10;    if tipos[i] == 'go':&amp;#10;        go_trials += 1&amp;#10;        rt = rts[i]&amp;#10;        corr = corrs[i]&amp;#10;        key = keys[i]&amp;#10;&amp;#10;        if key in [None, '', 'None', 'none']:&amp;#10;            go_omitidas += 1&amp;#10;        else:&amp;#10;            try:&amp;#10;                rt = float(rt)&amp;#10;                if rt &gt;= 0.1:&amp;#10;                    go_rts.append(rt)&amp;#10;                    if corr in [0, '0']:&amp;#10;                        go_errores += 1&amp;#10;            except:&amp;#10;                continue&amp;#10;&amp;#10;omitidas_pct = go_omitidas / go_trials if go_trials &gt; 0 else 0&amp;#10;errores_pct = go_errores / go_trials if go_trials &gt; 0 else 0&amp;#10;rt_prom = sum(go_rts) / len(go_rts) if len(go_rts) &gt; 0 else 0&amp;#10;&amp;#10;mensaje = &quot;Resumen del bloque anterior:\n\n&quot;&amp;#10;problemas = 0&amp;#10;&amp;#10;if rt_prom &gt; 0.6:&amp;#10;    mensaje += &quot;⚠️ Respondiste muy lento. Intenta responder más rápido.\n&quot;&amp;#10;    problemas += 1&amp;#10;if omitidas_pct &gt; 0.10:&amp;#10;    mensaje += &quot;⚠️ Omitiste muchas respuestas. ¡No esperes, responde a todas las flechas!\n&quot;&amp;#10;    problemas += 1&amp;#10;if errores_pct &gt; 0.25:&amp;#10;    mensaje += &quot;⚠️ Cometiste varios errores. Presta más atención.\n&quot;&amp;#10;    problemas += 1&amp;#10;&amp;#10;if problemas == 0:&amp;#10;    mensaje += &quot;✅ Buen trabajo. Continúa así.\n&quot;&amp;#10;&amp;#10;mensaje += &quot;\nPresiona una tecla para continuar.&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="feedback_code_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="feedback">
+      <RoutineSettingsComponent name="feedback" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="feedback" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="feedback_text" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="import {mean} from 'numpy';&amp;#10;omiss_pct = ((n_omisiones_A / n_trials_A) * 100);&amp;#10;error_pct = ((n_errores_A / n_trials_A) * 100);&amp;#10;mean_rt_ms = (rt_list_A ? (mean(rt_list_A) * 1000) : 0);&amp;#10;mensajes = [&quot;Ahora veiene el segundo bloque de la misma tarea&quot;];&amp;#10;if ((omiss_pct &gt; 10)) {&amp;#10;    mensajes.push(`Omitiste un ${util.pad(Number.parseFloat(omiss_pct).toFixed(1), 1)}%.  Responde a todas las flechas.`);&amp;#10;}&amp;#10;if ((error_pct &gt; 25)) {&amp;#10;    mensajes.push(`Tienes un ${util.pad(Number.parseFloat(error_pct).toFixed(1), 1)}% de errores. Presta más atención`);&amp;#10;}&amp;#10;if ((mean_rt_ms &gt; 600)) {&amp;#10;    mensajes.push(`Responde lo más rápido que puedas`);&amp;#10;}&amp;#10;if (mensajes) {&amp;#10;    fbMsg = mensajes.join(&quot;\n&quot;);&amp;#10;} else {&amp;#10;    fbMsg = &quot;Buen trabajo. Puedes continuar.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Cálculo de métricas para feedback&amp;#10;from numpy import mean&amp;#10;&amp;#10;omiss_pct = (n_omisiones_A / n_trials_A) * 100&amp;#10;error_pct = (n_errores_A / n_trials_A) * 100&amp;#10;mean_rt_ms = mean(rt_list_A)*1000 if rt_list_A else 0&amp;#10;&amp;#10;mensajes = [&quot;Ahora veiene el segundo bloque de la misma tarea&quot;]&amp;#10;&amp;#10;if omiss_pct &gt; 10:&amp;#10;    mensajes.append(f&quot;Omitiste un {omiss_pct:.1f}%.  Responde a todas las flechas.&quot;)&amp;#10;if error_pct &gt; 25:&amp;#10;    mensajes.append(f&quot;Tienes un {error_pct:.1f}% de errores. Presta más atención&quot;)&amp;#10;if mean_rt_ms &gt; 600:&amp;#10;    mensajes.append(f&quot;Responde lo más rápido que puedas&quot;)&amp;#10;&amp;#10;if mensajes:&amp;#10;    fbMsg = &quot;\n&quot;.join(mensajes)&amp;#10;else:&amp;#10;    fbMsg = &quot;Buen trabajo. Puedes continuar.&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="feedback_text" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="feedback_text_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="feedback_text_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="10.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$fbMsg" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="instrucciones"/>
+    <LoopInitiator loopType="TrialHandler" name="solo_go">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="conditions/practica_go.csv" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="0" valType="num"/>
+      <Param name="name" updates="None" val="solo_go" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="ITI_routine"/>
+    <Routine name="cruz"/>
+    <Routine name="practica_go"/>
+    <LoopTerminator name="solo_go"/>
     <LoopInitiator loopType="TrialHandler" name="A">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)])]" valType="str"/>
@@ -475,5 +833,21 @@
     <Routine name="cruz"/>
     <Routine name="bloque_A"/>
     <LoopTerminator name="A"/>
+    <Routine name="feedback"/>
+    <LoopInitiator loopType="TrialHandler" name="B">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="conditions/block1_test_sequence.csv" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="B" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="ITI_routine"/>
+    <Routine name="cruz"/>
+    <Routine name="bloque_A"/>
+    <LoopTerminator name="B"/>
   </Flow>
 </PsychoPy2experiment>
