@@ -1,6 +1,0 @@
-trial_type,direction,correct_key,angle
-go,left,left,-90
-go,left,left,-90
-go,right,right,90
-go,left,left,-90
-stop,left,,-90

@@ -392,88 +392,6 @@
         <Param val="contado_fb" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
-    <Routine name="instrucciones">
-      <RoutineSettingsComponent name="instrucciones" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="instrucciones" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <TextComponent name="text" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Arial" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="text" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="espacio para comenzar" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <KeyboardComponent name="key_resp" plugin="None">
-        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
-        <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="key_resp" valType="code" updates="None" name="name"/>
-        <Param val="press" valType="str" updates="constant" name="registerOn"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="last key" valType="str" updates="constant" name="store"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
-      <CodeComponent name="definicion_ssd" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="SSD_dynamic = 0.25  &amp;#10;# valor que se irá ajustando según el staircase&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="SSD_dynamic = 0.25;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="definicion_ssd" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-    </Routine>
     <Routine name="stats">
       <RoutineSettingsComponent name="stats" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -755,13 +673,13 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <CodeComponent name="feedback_text" plugin="None">
+      <CodeComponent name="feedback_text_2" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="import {mean} from 'numpy';&amp;#10;omiss_pct = ((n_omisiones_A / n_trials_A) * 100);&amp;#10;error_pct = ((n_errores_A / n_trials_A) * 100);&amp;#10;mean_rt_ms = (rt_list_A ? (mean(rt_list_A) * 1000) : 0);&amp;#10;mensajes = [&quot;Ahora veiene el segundo bloque de la misma tarea&quot;];&amp;#10;if ((omiss_pct &gt; 10)) {&amp;#10;    mensajes.push(`Omitiste un ${util.pad(Number.parseFloat(omiss_pct).toFixed(1), 1)}%.  Responde a todas las flechas.`);&amp;#10;}&amp;#10;if ((error_pct &gt; 25)) {&amp;#10;    mensajes.push(`Tienes un ${util.pad(Number.parseFloat(error_pct).toFixed(1), 1)}% de errores. Presta más atención`);&amp;#10;}&amp;#10;if ((mean_rt_ms &gt; 600)) {&amp;#10;    mensajes.push(`Responde lo más rápido que puedas`);&amp;#10;}&amp;#10;if (mensajes) {&amp;#10;    fbMsg = mensajes.join(&quot;\n&quot;);&amp;#10;} else {&amp;#10;    fbMsg = &quot;Buen trabajo. Puedes continuar.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Cálculo de métricas para feedback&amp;#10;from numpy import mean&amp;#10;&amp;#10;omiss_pct = (n_omisiones_A / n_trials_A) * 100&amp;#10;error_pct = (n_errores_A / n_trials_A) * 100&amp;#10;mean_rt_ms = mean(rt_list_A)*1000 if rt_list_A else 0&amp;#10;&amp;#10;mensajes = [&quot;Ahora veiene el segundo bloque de la misma tarea&quot;]&amp;#10;&amp;#10;if omiss_pct &gt; 10:&amp;#10;    mensajes.append(f&quot;Omitiste un {omiss_pct:.1f}%.  Responde a todas las flechas.&quot;)&amp;#10;if error_pct &gt; 25:&amp;#10;    mensajes.append(f&quot;Tienes un {error_pct:.1f}% de errores. Presta más atención&quot;)&amp;#10;if mean_rt_ms &gt; 600:&amp;#10;    mensajes.append(f&quot;Responde lo más rápido que puedas&quot;)&amp;#10;&amp;#10;if mensajes:&amp;#10;    fbMsg = &quot;\n&quot;.join(mensajes)&amp;#10;else:&amp;#10;    fbMsg = &quot;Buen trabajo. Puedes continuar.&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="import {mean} from 'numpy';&amp;#10;omiss_pct = ((n_omisiones_A / n_trials_A) * 100);&amp;#10;error_pct = ((n_errores_A / n_trials_A) * 100);&amp;#10;mean_rt_ms = (rt_list_A ? (mean(rt_list_A) * 1000) : 0);&amp;#10;mensajes = [&quot;Ahora veiene el segundo bloque de la misma tarea&quot;];&amp;#10;if ((omiss_pct &gt; 10)) {&amp;#10;    mensajes.push(`Estás dejando muchas flechas sin responder. Presta más atención`);&amp;#10;}&amp;#10;if ((error_pct &gt; 25)) {&amp;#10;    mensajes.push(`Tienes varios errores. Presta más atención`);&amp;#10;}&amp;#10;if ((mean_rt_ms &gt; 600)) {&amp;#10;    mensajes.push(`Tu tiempo de respuesta es un poco lento. Intenta responder más rápido.`);&amp;#10;}&amp;#10;if (mensajes) {&amp;#10;    fbMsg = mensajes.join(&quot;\n&quot;);&amp;#10;} else {&amp;#10;    fbMsg = &quot;Buen trabajo. Puedes continuar.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Cálculo de métricas para feedback&amp;#10;from numpy import mean&amp;#10;&amp;#10;omiss_pct = (n_omisiones_A / n_trials_A) * 100&amp;#10;error_pct = (n_errores_A / n_trials_A) * 100&amp;#10;mean_rt_ms = mean(rt_list_A)*1000 if rt_list_A else 0&amp;#10;&amp;#10;mensajes = [&quot;Ahora veiene el segundo bloque de la misma tarea&quot;]&amp;#10;&amp;#10;if omiss_pct &gt; 10:&amp;#10;    mensajes.append(f&quot;Estás dejando muchas flechas sin responder. Presta más atención&quot;)&amp;#10;if error_pct &gt; 25:&amp;#10;    mensajes.append(f&quot;Tienes varios errores. Presta más atención&quot;)&amp;#10;if mean_rt_ms &gt; 600:&amp;#10;    mensajes.append(f&quot;Tu tiempo de respuesta es un poco lento. Intenta responder más rápido.&quot;)&amp;#10;&amp;#10;if mensajes:&amp;#10;    fbMsg = &quot;\n&quot;.join(mensajes)&amp;#10;else:&amp;#10;    fbMsg = &quot;Buen trabajo. Puedes continuar.&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -770,7 +688,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="feedback_text" valType="code" updates="None" name="name"/>
+        <Param val="feedback_text_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="feedback_text_text" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
@@ -817,6 +735,53 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
+      <TextComponent name="text_practica_full" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text_practica_full" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Ahora haremos una práctica breve. &amp;#10;La mayoría de las veces verás solo flechas. Pero algunas veces escucharás un tono después de la flecha. &amp;#10;&amp;#10;Si escuchas el tono: ¡intenta NO presionar ninguna tecla!&amp;#10;&amp;#10;&amp;#10;&amp;#10;Recuerda: No esperes el tono. Responde siempre rápido a la flecha.&amp;#10;Es normal que a veces no logres frenar a tiempo, incluso que suene despues que respondas, el programa lo tiene en cuenta. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Presiona espacio para comenzar la práctica." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="fin_text_practica_full" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="fin_text_practica_full" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
     </Routine>
     <Routine name="Bloque_practica">
       <RoutineSettingsComponent name="Bloque_practica" plugin="None">
@@ -959,8 +924,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="import {mean} from 'numpy';&amp;#10;omiss_pct = ((n_omisiones_practica / n_trials_practica) * 100);&amp;#10;error_pct = ((n_errores_practica / n_trials_practica) * 100);&amp;#10;mean_rt_ms = (rt_list_practica ? (mean(rt_list_practica) * 1000) : 0);&amp;#10;mensajes = [&quot;Ahora veiene el segundo bloque de la misma tarea&quot;];&amp;#10;if ((omiss_pct &gt; 10)) {&amp;#10;    mensajes.push(`Omitiste un ${util.pad(Number.parseFloat(omiss_pct).toFixed(1), 1)}%.  Responde a todas las flechas.`);&amp;#10;}&amp;#10;if ((error_pct &gt; 25)) {&amp;#10;    mensajes.push(`Tienes un ${util.pad(Number.parseFloat(error_pct).toFixed(1), 1)}% de errores. Presta más atención`);&amp;#10;}&amp;#10;if ((mean_rt_ms &gt; 600)) {&amp;#10;    mensajes.push(`Responde lo más rápido que puedas`);&amp;#10;}&amp;#10;if (mensajes) {&amp;#10;    fbMsgpractica = mensajes.join(&quot;\n&quot;);&amp;#10;} else {&amp;#10;    fbMsgpractica = &quot;Buen trabajo. Puedes continuar.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Cálculo de métricas para feedback&amp;#10;from numpy import mean&amp;#10;&amp;#10;omiss_pct = (n_omisiones_practica / n_trials_practica) * 100&amp;#10;error_pct = (n_errores_practica / n_trials_practica) * 100&amp;#10;mean_rt_ms = mean(rt_list_practica)*1000 if rt_list_practica else 0&amp;#10;&amp;#10;mensajes = [&quot;Ahora veiene el segundo bloque de la misma tarea&quot;]&amp;#10;&amp;#10;if omiss_pct &gt; 10:&amp;#10;    mensajes.append(f&quot;Omitiste un {omiss_pct:.1f}%.  Responde a todas las flechas.&quot;)&amp;#10;if error_pct &gt; 25:&amp;#10;    mensajes.append(f&quot;Tienes un {error_pct:.1f}% de errores. Presta más atención&quot;)&amp;#10;if mean_rt_ms &gt; 600:&amp;#10;    mensajes.append(f&quot;Responde lo más rápido que puedas&quot;)&amp;#10;&amp;#10;if mensajes:&amp;#10;    fbMsgpractica = &quot;\n&quot;.join(mensajes)&amp;#10;else:&amp;#10;    fbMsgpractica = &quot;Buen trabajo. Puedes continuar.&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="import {mean} from 'numpy';&amp;#10;omiss_pct = ((n_omisiones_practica / n_trials_practica) * 100);&amp;#10;error_pct = ((n_errores_practica / n_trials_practica) * 100);&amp;#10;mean_rt_ms = (rt_list_practica ? (mean(rt_list_practica) * 1000) : 0);&amp;#10;mensajes = [&quot;Fin de la practica. Automaticamente comenzar\u00e1 el test&quot;];&amp;#10;if ((omiss_pct &gt; 20)) {&amp;#10;    mensajes.push(`Estás dejando muchas flechas sin responder. Intenta responder a todas las flechas rápidamente.`);&amp;#10;}&amp;#10;if ((error_pct &gt; 75)) {&amp;#10;    mensajes.push(`Estás respondiendo en casi todos los ensayos con tono. Recuerda: intenta frenar cuando lo escuches.`);&amp;#10;}&amp;#10;if ((mean_rt_ms &gt; 700)) {&amp;#10;    mensajes.push(`Estás frenando casi siempre. Es posible que estés esperando el tono. Responde sin esperar, incluso si eso significa que no puedas frenar siempre.`);&amp;#10;}&amp;#10;if (mensajes) {&amp;#10;    fbMsgpractica = mensajes.join(&quot;\n&quot;);&amp;#10;} else {&amp;#10;    fbMsgpractica = &quot;Buen trabajo. Puedes continuar.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Cálculo de métricas para feedback&amp;#10;from numpy import mean&amp;#10;&amp;#10;omiss_pct = (n_omisiones_practica / n_trials_practica) * 100&amp;#10;error_pct = (n_errores_practica / n_trials_practica) * 100&amp;#10;mean_rt_ms = mean(rt_list_practica)*1000 if rt_list_practica else 0&amp;#10;&amp;#10;mensajes = [&quot;Fin de la practica. Automaticamente comenzará el test&quot;]&amp;#10;&amp;#10;if omiss_pct &gt; 20:&amp;#10;    mensajes.append(f&quot;Estás dejando muchas flechas sin responder. Intenta responder a todas las flechas rápidamente.&quot;)&amp;#10;if error_pct &gt; 75:&amp;#10;    mensajes.append(f&quot;Estás respondiendo en casi todos los ensayos con tono. Recuerda: intenta frenar cuando lo escuches.&quot;)&amp;#10;if mean_rt_ms &gt; 700:&amp;#10;    mensajes.append(f&quot;Estás frenando casi siempre. Es posible que estés esperando el tono. Responde sin esperar, incluso si eso significa que no puedas frenar siempre.&quot;)&amp;#10;&amp;#10;if mensajes:&amp;#10;    fbMsgpractica = &quot;\n&quot;.join(mensajes)&amp;#10;else:&amp;#10;    fbMsgpractica = &quot;Buen trabajo. Puedes continuar.&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -999,32 +964,164 @@
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
+    <Routine name="instrucciones_primeras">
+      <RoutineSettingsComponent name="instrucciones_primeras" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="instrucciones_primeras" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="En esta tarea, verás flechas que apuntan a la izquierda o a la derecha.&amp;#10;Tu tarea es presionar la tecla correspondiente lo más rápido y preciso posible. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;A veces, escucharás un tono poco después de que aparezca la flecha.&amp;#10;Ese tono te indica que debes intentar NO responder.&amp;#10;&amp;#10;No debes esperar a ver si suena el tono. &amp;#10;Responde rápido a todas las flechas. El programa ajusta automáticamente la dificultad.&amp;#10;&amp;#10;&amp;#10;&amp;#10;Presiona espacio para comenzar el bloques de práctica." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <CodeComponent name="definicion_ssd" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="SSD_dynamic = 0.25  &amp;#10;# valor que se irá ajustando según el staircase&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="SSD_dynamic = 0.25;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="definicion_ssd" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="instrucciones_practica_go">
+      <RoutineSettingsComponent name="instrucciones_practica_go" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="instrucciones_practica_go" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="text_practica_go" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text_practica_go" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Comencemos con una práctica corta para que te familiarices con la tarea.&amp;#10;Solo verás flechas, sin ningún tono.&amp;#10;&amp;#10;Recuerda:&amp;#10;&amp;#10;&amp;#10;&amp;#10;Presiona ← si la flecha apunta a la izquierda.&amp;#10;&amp;#10;&amp;#10;Presiona → si apunta a la derecha.&amp;#10;&amp;#10;&amp;#10;&amp;#10;Responde lo más rápido y preciso que puedas.&amp;#10;&amp;#10;Presiona espacio para comenzar." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="fin_text_practica_go" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="fin_text_practica_go" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
-    <Routine name="instrucciones"/>
-    <LoopInitiator loopType="TrialHandler" name="solo_go">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')]), OrderedDict([('direction', 'right'), ('angle', 90), ('correct_key', 'right'), ('trial_type', 'go')]), OrderedDict([('direction', 'left'), ('angle', -90), ('correct_key', 'left'), ('trial_type', 'go')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="conditions/practica_go.csv" valType="file"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="0" valType="num"/>
-      <Param name="name" updates="None" val="solo_go" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="ITI_routine"/>
-    <Routine name="cruz"/>
-    <Routine name="practica_go"/>
-    <LoopTerminator name="solo_go"/>
+    <Routine name="instrucciones_primeras"/>
     <Routine name="pantalla_paso"/>
     <LoopInitiator loopType="TrialHandler" name="practica">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="conditions/block1_test_sequence.csv" valType="file"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="conditions/practica_go_stop.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="num"/>
       <Param name="name" updates="None" val="practica" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
@@ -1036,11 +1133,11 @@
     <Routine name="feedback_practica"/>
     <LoopInitiator loopType="TrialHandler" name="A">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="conditions/block1_test_sequence.csv" valType="file"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="conditions/SST.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="num"/>
       <Param name="name" updates="None" val="A" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
@@ -1052,8 +1149,8 @@
     <Routine name="feedback"/>
     <LoopInitiator loopType="TrialHandler" name="B">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="conditions/block1_test_sequence.csv" valType="file"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'left'), ('correct_key', None), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'go'), ('direction', 'left'), ('correct_key', 'left'), ('angle', -90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'stop'), ('direction', 'right'), ('correct_key', None), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)]), OrderedDict([('trial_type', 'go'), ('direction', 'right'), ('correct_key', 'right'), ('angle', 90)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="conditions/SST.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
